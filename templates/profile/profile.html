@@ -513,7 +513,6 @@ a:-webkit-any-link {
        var f= $('#update_user_profilePicture')
        var form=new FormData(f.closest('form').get(0))
        $.ajax({
-        url: "{% url 'update-pic' %}",
         type: 'POST',
         data: form,
         contentType: 'multipart/form-data',

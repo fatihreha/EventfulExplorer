@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
 
 class SignUpForm(UserCreationForm):
-    username = forms.CharField(),
+    username = forms.CharField()
     first_name = forms.CharField()
     last_name=forms.CharField()
     email=forms.EmailField()

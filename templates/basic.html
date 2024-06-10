@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Your Evnets Company Name</title>
+  <title>EventfulExplorer!</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -117,7 +117,7 @@ a:hover {
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="{% url 'index' %}"><span>Company Name</span></a></h1>
+        <h1><a href="{% url 'index' %}"><span>Eventful Explorer</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -130,7 +130,7 @@ a:hover {
          
           
           {% if user|user_in_group:"Participant" %}
-            <li><a class="nav-link scrollto" href="{% url 'viewe_all_event' %}">Book Events</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'view_all_event' %}">Book Events</a></li>
           {% endif %}
 
           {% if user|user_in_group:"Offerer" %}
@@ -145,7 +145,7 @@ a:hover {
               <img class="dropdown-toggle" src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png" style="width: 40px; height:40px;border-radius: 50%;"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <h6 class="dropdown-header">{{ request.user.username }}</h6>
-                <a class=" text-black" href="{% url 'viewe_profile' %}" >Profile</a>
+                <a class=" text-black" href="{% url 'view_profile' %}" >Profile</a>
                 <a class="text-black" href="{% url 'logout' %}" >Logout</a>
                 
               </div>
@@ -331,7 +331,8 @@ a:hover {
               <div id="tagsHelp" class="form-text">Hold Ctrl (or Command) to select multiple tags</div>
             </div>
               <div class="col my-2">
-                <label>Is Educational Leave?</label>
+                <label>18+? (Check if the event is for 18+ only)</label>
+
                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="is_leave">
                 
               </div>

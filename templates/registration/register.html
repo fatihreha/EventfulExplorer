@@ -54,27 +54,15 @@
         $('#id_password2').attr('type','password')
 
 
-        $('#signup-form').submit(function(e){
-          e.preventDefault();
-          email=$("#id_email").val()
-          if(email==='')
-          {
-            alert('Please Enter Email')
-          }
-          else
-          {
-            $("#id_username").val(email)
-            this.submit()
-          }
+        $('#signup-form').submit(function(){
+            email=$("#id_email").val()
+            if(email===''){
+                alert('Please Enter Email')
+            } else {
+                $("#id_username").val(email)
+            }
         })
     });
    </script>
 
 {% endblock %}
-
-
-
-
-
-
-
